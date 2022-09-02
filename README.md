@@ -1,5 +1,5 @@
-### 嘉大電機 109-1 計算型智慧 作業 
-#### HW1 : Fuzzy model
+### 嘉大電機 109-1 計算型智慧 Computational Intelligence 作業
+#### HW1 : Fuzzy model 倒車
 * 本次作業說明 :  
   根據論文建立以下 fuzzy controller 的規則  
     
