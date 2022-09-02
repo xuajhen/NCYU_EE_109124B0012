@@ -58,7 +58,7 @@ float max(float x,float y)
 int main()
 {
 	double x,y,initial_x,initial_y,last_x,last_y;
-	double fi;double angle;int step;
+	double fi = 0;double angle = 0;int step = 0;
 	double docking_e;
 	double trajectory_e,length_sum;
 	float x_rank_max,fi_rank_max;
@@ -111,7 +111,7 @@ int main()
 		
 		length_sum += sqrt((last_x - x)*(last_x - x)+(last_y - y)*(last_y - y));
 			/*print fam_bank*/
-		printf("    LE    LC    CE    RC    RI\n");
+		/*printf("    LE    LC    CE    RC    RI\n");
 		printf("RB  %.3f %.3f %.3f %.3f %.3f \n",fam[0][0],fam[0][1],fam[0][2],fam[0][3],fam[0][4]);
 		printf("RU  %.3f %.3f %.3f %.3f %.3f \n",fam[1][0],fam[1][1],fam[1][2],fam[1][3],fam[1][4]);
 		printf("RV  %.3f %.3f %.3f %.3f %.3f \n",fam[2][0],fam[2][1],fam[2][2],fam[2][3],fam[2][4]);
@@ -122,8 +122,8 @@ int main()
 		printf("\n");
 		printf("LE=%.3f LC=%.3f CE=%.3f RC=%.3f RI=%.3f \n",LE,LC,CE,RC,RI);
 		printf("RB=%.3f RU=%.3f RV=%.3f VE=%.3f LV=%.3f LU=%.3f LB=%.3f \n\n",RB,RU,RV,VE,LV,LU,LB);
-		printf("turn_angle = %f\n\n",angle);
-		
+		printf("turn_angle = %f\n\n",angle);*/
+		printf("x = %.6f, y = %.6f, fi = %.6f \n",x,y,fi);
 		fprintf(f_loop,"x = %.6f, y = %.6f, fi = %.6f \n",x,y,fi);
 		}
 	printf("路徑檔案生成完成\n");
@@ -347,7 +347,7 @@ void average_docking_and_trajectory_error()
 {
 	double x,y,x_i,y_i,last_x,last_y;
 	double fi,fi_i;
-	double angle,docking_e,trajectory_e,length_sum;
+	double angle = 0,docking_e = 0,trajectory_e = 0,length_sum = 0;
 	int step;
 	step = 0;
 	for(x_i = 20; x_i <= 80; x_i = x_i + 10) {
@@ -361,6 +361,7 @@ void average_docking_and_trajectory_error()
 					last_y = y;	
 					region_x(x);
 					region_fi(fi);
+					
 					region_fi_x();
 					region_theta();
 					angle = turn_angle();

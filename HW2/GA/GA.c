@@ -50,7 +50,7 @@ int main()
     srand((unsigned)time(NULL));
     float angle;
     float x,y,fi;
-    int s = 0,temp,step,point;
+    int s = 0,temp = 0,step = 0,point = 0;
     double dock_temp;
     float x_temp,y_temp,fi_temp;
 
@@ -199,7 +199,7 @@ int main()
     docking_e = docking_error(fi,x,y);
     //trajectory_e = trajectory_error(length_sum,initial_x,initial_y);
     printf("此次的docking_error = %f \n",docking_e);
-    //printf("此次的trajectory_error = %f \n",trajectory_e);
+    //printf("此次的docking_error = %f \n",trajectory_e);
 
      average_docking_and_trajectory_error();
     system("pause");
@@ -521,7 +521,7 @@ void average_docking_and_trajectory_error()
 {
 	double x,y,x_i,y_i,last_x,last_y;
 	double fi,fi_i;
-	double angle,docking_e,trajectory_e,length_sum,temp;
+	double angle = 0,docking_e = 0,trajectory_e = 0,length_sum = 0 ,temp = 0;
 	int step;
 	step = 0;
 	for(x_i = 25; x_i <= 75; x_i = x_i + 10) {
